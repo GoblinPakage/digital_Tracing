@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-  <title>Hello from Flask</title>
+  <title>Training</title>
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -16,23 +16,32 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<h1>Hello {{ name }}!</h1>
+<h1>my log is there {{ value }}!</h1>
+
+
 <form action="#" method="post" target="_self">
+    <div class="row">
+        
+        <div class="logging_window">
+            <label >Test area:</label><input type="text"  id="textLogger">
+            <pre id="output">
+                <h3>text cookie</h3>
+                {{ value }}
+                <br>
+                <h3>text analytic</h3>
+                {{ analytic }}
+            </pre>
+        </div>
+      </div>
   <input type="button"
-  onclick="RedirectionJavascriptLogger()"
+  onclick="send()"
   style="background-color: rgb(119, 81, 81);"
-  value="submit">
-  <input type="button"
-  onclick="RedirectionJavascriptCookie()"
-  style="background-color: rgb(81, 105, 119);"
   value="submit">
 </form>
 <script>
-  function RedirectionJavascriptLogger(){
-  document.location.href="https://5yqd7l.deta.dev/logger";
-  }
-  function RedirectionJavascriptCookie(){
-  document.location.href="https://5yqd7l.deta.dev/cookie";
+  function send() {
+    var x = document.getElementById("textLogger");
+    console.warn(x.value) ;
   }
 </script>
 </body>
