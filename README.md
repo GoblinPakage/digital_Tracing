@@ -1,4 +1,4 @@
-# digital_Tracing
+# Digital Traces
  
 - [x] small python application with Flask 
 - [x] The web application is deploy with Deta
