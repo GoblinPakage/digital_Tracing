@@ -1,7 +1,7 @@
 # Digital Traces
  
 - [x] small python application with Flask 
-- [x] The web application is deploy with Deta
+- [x] The web application is deploy with Deta to this address
   https://5yqd7l.deta.dev/
 - [x] Application usage is tracking using google analytics
 
