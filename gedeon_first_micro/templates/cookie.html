@@ -2,7 +2,7 @@
 <head>
   <title>Training</title>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -12,31 +12,34 @@
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS63235"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS63235"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-
-<h1>my log is there {{ value }}!</h1>
 
 
 <form action="#" method="post" target="_self">
     <div class="row">
         
         <div class="logging_window">
-            <label >Test area:</label><input type="text"  id="textLogger">
+<!--             <label >Test area:</label><input type="text"  id="textLogger"> -->
+          <h1>Part 2</h1>
             <pre id="output">
-                <h3>text cookie</h3>
-                {{ value }}
+              <div style="max-width:400px ;">
+                <label>Google cookie: </label>{{ value }}
                 <br>
-                <h3>text analytic</h3>
-                {{ analytic }}
+                <label>Ganalytic analytic: </label>{{ analytic }}
+                <br>
+                <label>Number of user: </label>{{visit}}
+                <br>
+                <label>Number of event click</label>{{event}}
+              </div>
             </pre>
         </div>
       </div>
-  <input type="button"
+<!--   <input type="button"
   onclick="send()"
   style="background-color: rgb(119, 81, 81);"
-  value="submit">
+  value="submit"> -->
 </form>
 <script>
   function send() {
