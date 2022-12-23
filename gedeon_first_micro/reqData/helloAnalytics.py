@@ -62,8 +62,8 @@ class helloAnalytics:
                 ids='ga:' + profile_id,
                 start_date='7daysAgo',
                 end_date='today',
-                dimensions='ga:eventValue',
-                metrics='ga:sessions').execute()
+                #dimention='ga:eventValue',
+                metrics='ga:totalEvents, ga:sessions').execute()
 
 
     def print_results(results):
