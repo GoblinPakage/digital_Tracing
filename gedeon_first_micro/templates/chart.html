@@ -17,8 +17,11 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<h1>Hello {{ name }}!</h1>
+<h1>The Line chart of Blochaine</h1>
 
+<div class="back">
+  <button onclick="Previous()">Back to Home</button>
+</div>
 
 <canvas id="myChart" width="400" height="400"></canvas>
 
@@ -37,12 +40,9 @@
 
 
 <script>
-  function RedirectionJavascriptLogger(){
-  document.location.href="https://5yqd7l.deta.dev/logger";
-  }
-  function RedirectionJavascriptCookie(){
-  document.location.href="https://5yqd7l.deta.dev/cookie";
-  }
+        function Previous() {
+            window.history.back()
+        }
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>

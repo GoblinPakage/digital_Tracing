@@ -1,7 +1,7 @@
 <!doctype html>
 <head>
   <title>Training</title>
-  <link rel="stylesheet" href=url_for('static', filename='custom.css')>
+  <link rel="stylesheet" href='../static/css/custom.css'>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -16,14 +16,16 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS63235"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-
-
+  <h1>Part 2</h1>
+  <div class="back">
+    <button onclick="Previous()">Back to Home</button>
+  </div>
 <form action="#" method="post" target="_self">
     <div class="row">
         
         <div class="logging_window">
 <!--             <label >Test area:</label><input type="text"  id="textLogger"> -->
-          <h1>Part 2</h1>
+    
             <pre id="output">
               <div style="max-width:400px ;">
                 <label>Google cookie: </label>{{ value }}
@@ -46,6 +48,9 @@
   function send() {
     var x = document.getElementById("textLogger");
     console.warn(x.value) ;
-  }
+  }        
+  function Previous() {
+            window.history.back()
+        }
 </script>
 </body>

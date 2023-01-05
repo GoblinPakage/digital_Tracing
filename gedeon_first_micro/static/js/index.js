@@ -1,5 +1,5 @@
 d3
- .csv("../static/Iris.csv")
+ .csv("../static/time.csv")
  .then(makeChart);
 
 
@@ -20,10 +20,10 @@ function makeChart(data) {
     // Group by specie as key to the person array
     // var newdata= groupBy(data, "Species");
     // console.log(newdata)
-      var country = data.map(function(d) { return d.Species;});
-      var value = data.map(function(d) {return d.SepalLengthCm});
+      var label = data.map(function(d) { return d.date;});
+      var value = data.map(function(d) {return d.Blockchain});
 
-// Bar chart
+/* // Bar chart
 new Chart(document.getElementById("myChart"), {
     type: 'bar',
     data: {
@@ -43,5 +43,31 @@ new Chart(document.getElementById("myChart"), {
         text: 'difference in Iris'
       }
     }
+});
+
+ */
+// Line chart
+new Chart(document.getElementById("myChart"), {
+  type: 'line',
+  data: {
+    labels: label,
+    datasets: [{
+        data: value,
+        label: "Alberta",
+        borderColor: "#3e95cd",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Blockchain'
+    },
+    hover: {
+     mode: 'index',
+     intersect: true
+    },
+  }
 });
 }

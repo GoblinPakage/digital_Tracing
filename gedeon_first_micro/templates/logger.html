@@ -1,7 +1,7 @@
 <!doctype html>
 <head>
   <title>Training</title>
-  <link rel="stylesheet" href=url_for('static', filename='custom.css')>
+  <link rel="stylesheet" href='../static/css/custom.css'>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -17,27 +17,34 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+  <h1>my log is there {{ value }}!</h1>
+
+  <div class="back">
+    <button onclick="Previous()">Back to Home</button>
+  </div>
 
 <form action="#" method="post" target="_self">
-  <div>
-    <h1>my log is there {{ value }}!</h1>
-  </div>
+
   <div class="row">
       
       <div class="logging_window">
           <label >Test area:</label><input type="text"  id="textLogger">
           <!--  <pre id="output"></pre> -->
+          <input type="button"
+          onclick="send()"
+          style="background-color: rgb(119, 81, 81);"
+          value="submit">
       </div>
     </div>
-  <input type="button"
-  onclick="send()"
-  style="background-color: rgb(119, 81, 81);"
-  value="submit">
+
 </form>
 <script>
   function send() {
     var x = document.getElementById("textLogger");
     console.warn(x.value) ;
   }
+          function Previous() {
+            window.history.back()
+        }
 </script>
 </body>

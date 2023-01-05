@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-  <title>Hello from Flask</title>
+  <title>Flask and chart</title>
   <link rel="stylesheet" href='../static/css/custom.css'>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -17,38 +17,48 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<h1>Hello {{ name }}!</h1>
-<form action="#" method="post" target="_self">
-  
-  <input type="button" id="log"
+<h1>Comparaison</h1>
+
+<div class="back">
+    <button onclick="Previous()">Back to Home</button>
+</div>
+<br>
+<table class="compa">
+    <thead>
+        <td style="text-align: center;" >With Dictionnary</td>
+        <td style="text-align: center;">Witn count function</td>
+    </thead>
+    <tr>
+        <td> {{D_count}}</td>
+        <td>{{F_count}}</td>
+    </tr>
+</table>
+
+
+<!--
+<canvas id="myChart" width="400" height="400"></canvas>
+
+ <form action="#" method="post" target="_self">
+  <input type="button"
   onclick="RedirectionJavascriptLogger()"
+  style="background-color: rgb(119, 81, 81);"
   value="Logger">
 
-  <input type="button" id="coo"
+  <input type="button"
   onclick="RedirectionJavascriptCookie()"
+  style="background-color: rgb(81, 105, 119);"
   value="Cookie">
-
-  <input type="button" id="char"
-  onclick="RedirectionJavascriptChart()"
-  value="Chart">
-
-  <input type="button" id="char"
-  onclick="RedirectionJavascriptCompa()"
-  value="compa">
   
-</form>
+</form> -->
+
+
 <script>
-  function RedirectionJavascriptLogger(){
-  document.location.href="https://5yqd7l.deta.dev/logger";
-  }
-  function RedirectionJavascriptCookie(){
-  document.location.href="https://5yqd7l.deta.dev/cookie";
-  }
-  function RedirectionJavascriptChart(){
-  document.location.href="https://5yqd7l.deta.dev/Bar chart";
-  }
-  function RedirectionJavascriptCompa(){
-  document.location.href="https://5yqd7l.deta.dev/Comparaison";
-  }
+    function Previous() {
+        window.history.back()
+    }
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="../static/js/d3.min.js"></script>
+<script  src='../static/js/index.js'></script>
 </body>

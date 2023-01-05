@@ -17,16 +17,34 @@ body{
 }
 #myChart{
     display: flexbox;
-    background-color:#333;
+    background-color:rgba(192, 166, 166, 0.925);
     border-radius: 12px;
     box-shadow: #ccc;
+    max-width: 1470px;
+    max-height: 1000px ;
 }
-#char{
-    background-color: rgb(167, 67, 133);
+#char:hover{
+    background-color: #ddd;
+    color: rgb(167, 67, 133);
 }
-#coo{
-    background-color: rgb(8, 60, 90);
+#coo:hover{
+    background-color: #ddd;
+    color: rgb(47, 106, 139);
 }
-#log{
-    background-color: rgb(204, 207, 31);
+#log:hover{
+    background-color: #ddd;
+    color: rgb(204, 207, 31);
+}
+#compa:hover{
+    background-color: #ddd;
+    color: rgb(122, 180, 116);
+}
+.compa:hover{
+    background-color: #ddd;
+    color: rgb(163, 180, 206);
+}
+.back {
+    display:flex;
+    min-width:20px ;
+    flex-direction: row-reverse;
 }
