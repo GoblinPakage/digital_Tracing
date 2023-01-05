@@ -5,7 +5,9 @@ from reqData.get_request import get_request
 from reqData.helloAnalytics import helloAnalytics
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static',
+            static_folder='static',
+            template_folder='templates')
 
 @app.route('/', methods=["GET"])
 def hello_world():
@@ -88,3 +90,17 @@ def func_cookie():
         vist=data.get('rows')[0][1]
         return prefix_google + render_template('cookie.html', value=res.cookie, analytic=res2.text, event= evt, visit= vist)
 #func_cookie()
+@app.route('/Bar chart', methods=["GET"])
+def chart_request():
+    prefix_google = """
+    <!-- Google tag (gtag.js) -->
+    <script async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-250921816-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-250921816-1');
+    </script>
+    """
+    return prefix_google + render_template('chart.html', name="bar chart")
