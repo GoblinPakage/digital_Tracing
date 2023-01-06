@@ -15,8 +15,7 @@ def Count_Word_UsingDict(text):
 
 @exectionTime_decoration
 def Count_Word_UsingCounterfunc(text):
-    words = text.split()
     counts = []
-    for word in words:
-        counts.append(words.count(word))
+    for word in text:
+        counts.append(text.count(word))
     return counts
