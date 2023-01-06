@@ -15,7 +15,7 @@ def exectionTime_decoration(func):
         # get the average execution time
         logging.debug(f'Function {func.__name__} Execution time is { value } seconds')
         print(f'Function {func.__name__} Execution time is { value } seconds')
-        return result
+        return (f'Function {func.__name__} Execution time is { value } seconds')
     return execution
 
         

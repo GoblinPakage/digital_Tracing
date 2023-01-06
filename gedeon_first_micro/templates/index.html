@@ -17,24 +17,55 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<h1>Hello {{ name }}!</h1>
+<h2>Hello {{ name }}!</h2>
 <form action="#" method="post" target="_self">
-  
-  <input type="button" id="log"
-  onclick="RedirectionJavascriptLogger()"
-  value="Logger">
 
-  <input type="button" id="coo"
-  onclick="RedirectionJavascriptCookie()"
-  value="Cookie">
+  <div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Description</th>
+            <th>Redirection</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>TP1 generate logs</td>
+            <td>  
+              <input type="button" id="log"
+              onclick="RedirectionJavascriptLogger()"
+              value="Logger">
+            </td>
+        </tr>
+        <tr>
+            <td>Here is the extra of TP1 and the generate of cookie</td>
+            <td>
+              <input type="button" id="coo"
+              onclick="RedirectionJavascriptCookie()"
+              value="Cookie">
+            </td>
+        </tr>
+        <tr>
+            <td>TP3 Plot chart using chart.js</td>
+            <td>
+              <input type="button" id="char"
+              onclick="RedirectionJavascriptChart()"
+              value="Chart">
+            </td>
+        </tr>
+        <tr>
+            <td>comparaison with dict count and function counter </td>
+            <td>
+              <input type="button" id="char"
+              onclick="RedirectionJavascriptCompa()"
+              value="compa">
+            </td>
+        </tr>
+        <tbody>
+    </table>
+</div>
 
-  <input type="button" id="char"
-  onclick="RedirectionJavascriptChart()"
-  value="Chart">
 
-  <input type="button" id="char"
-  onclick="RedirectionJavascriptCompa()"
-  value="compa">
   
 </form>
 <script>

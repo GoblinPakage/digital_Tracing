@@ -125,7 +125,6 @@ def chart_request():
     return prefix_google + render_template('chart.html', name="bar chart")
 
 
-@exectionTime_decoration
 @app.route('/Comparaison', methods=["GET"])
 def comparaison():
     prefix_google = """
@@ -141,7 +140,9 @@ def comparaison():
     """
     req=get_request.get_data('https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt')
     data=req.text
+
     dict_count=Count_Word_UsingDict(data)
-    #funct_count=Count_Word_UsingCounterfunc(data)
+    funct_count=Count_Word_UsingCounterfunc(data)
     
-    return prefix_google + render_template('comparaison.html', D_count=dict_count, F_count="Function Count_Word_UsingDict Execution time is 8.999999998593466e-03 seconds")   
+    return prefix_google + render_template('comparaison.html', D_count=dict_count, F_count=funct_count) 
+#comparaison()    

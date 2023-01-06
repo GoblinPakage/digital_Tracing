@@ -17,22 +17,29 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<h1>Comparaison</h1>
+<h2>Comparaison</h2>
 
 <div class="back">
     <button onclick="Previous()">Back to Home</button>
 </div>
 <br>
-<table class="compa">
-    <thead>
-        <td style="text-align: center;" >With Dictionnary</td>
-        <td style="text-align: center;">Witn count function</td>
-    </thead>
-    <tr>
-        <td> {{D_count}}</td>
-        <td>{{F_count}}</td>
-    </tr>
-</table>
+
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>With Dictionnary</th>
+            <th>Witn count function</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{D_count}}</td>
+            <td>{{F_count}}</td>
+        </tr>
+        <tbody>
+    </table>
+</div>
 
 
 <!--

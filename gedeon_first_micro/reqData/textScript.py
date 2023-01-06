@@ -1,21 +1,14 @@
 from reqData.decoration import exectionTime_decoration
+import collections
 
 @exectionTime_decoration
 def Count_Word_UsingDict(text):
-    counts = dict()
-    words = text.split()
-
-    for word in words:
-        if word in counts:
-            counts[word] += 1
-        else:
-            counts[word] = 1
-
-    return counts
+    count = {}
+    list_of_words = text.split()
+    for word in list_of_words:
+        count[word] = count.get(word, 0) + 1
+    return 'ok'
 
 @exectionTime_decoration
 def Count_Word_UsingCounterfunc(text):
-    counts = []
-    for word in text:
-        counts.append(text.count(word))
-    return counts
+    return collections.Counter(text)
