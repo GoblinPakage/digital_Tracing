@@ -18,5 +18,5 @@ def Count_Word_UsingCounterfunc(text):
     words = text.split()
     counts = []
     for word in words:
-        counts.append({word:words.count(word)})
+        counts.append(words.count(word))
     return counts
